@@ -4,6 +4,7 @@ from django.db import models
 
 
 class Movie(models.Model):
+    id = models.AutoField(primary_key=True)
     Uploader_name = models.CharField(max_length=50)
     Name_of_movie = models.CharField(max_length=50)
     Genre_of_movie = models.TextField()

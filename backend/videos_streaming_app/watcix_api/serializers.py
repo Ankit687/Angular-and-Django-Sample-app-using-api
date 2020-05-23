@@ -18,5 +18,11 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
 class MovieSerializer(serializers.ModelSerializer):
     class Meta:
         model = Movie
-        fields = ['Uploader_name', 'Name_of_movie', 'Genre_of_movie',
-                  'Duration_of_movie', 'Rating', 'Thumbnail', 'Video_clip']
+        fields = ('id', 'Uploader_name', 'Name_of_movie', 'Genre_of_movie',
+                  'Duration_of_movie', 'Rating')
+
+
+class MovieMiniSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Movie
+        fields = ('id', 'Name_of_movie', 'Genre_of_movie')
